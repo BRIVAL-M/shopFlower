@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b58de1911.js" crossorigin="anonymous"></script>
+    <title>Shop Flower</title>
+</head>
+
+<body>
+    <div class="hiddenPage">
+        <h1 class="header__title">Shop <span class="deco">Flower</span></h1>
+        <img class="about__logo" src="images/shopFlowerAboutLogo.gif" alt="Logo de shop flower">
+        <p>Désolé, notre site n'est pas encore adapté à cette taille d'écran (340px minimum).<br>
+            <br> Nous nous excusons pour la gêne occasionnée.
+        </p>
+    </div>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__titleBox">
+                <img src="images/flowerShoppingLogo.gif" alt="">
+                <h1 class="header__title">Shop <span class="deco">Flower</span></h1>
+            </div>
+            <nav>
+                <ul class="header__nav">
+                    <li onclick="navigation(event, 'aboutUs')">
+                        <a class="header__nav-link" href="#aboutUs"><img class="header__nav--icon"
+                                src="images/infoIcon.gif" alt="">infos</a>
+                    </li>
+                    <li onclick="navigation(event, 'contact')">
+                        <a class="header__nav-link" href="#contact"><img class="header__nav--icon"
+                                src="images/contactIcon.gif" alt="">contact</a>
+                    </li>
+                    <li id="basket" class="header__nav-link">
+                        <img src="images/basketLogo.gif" alt="" class="header__nav--icon">panier
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="basket__container">
+                <h2 class="basket__title">Votre panier</h2>
+                <div class="basket__products"></div>
+                <div class="basket__total"></div>
+            </aside>
+        </div>
+        <div class="header__contentBox">
+            <h2 class="header__subtitle">Découvrez notre nouvel arrivage</h2>
+            <p class="header__txt">
+                <strong>Notre nouvel arrivage de fleurs à prix abordable est enfin là
+                    !</strong><br>
+                Nous avons sélectionné les plus belles fleurs pour offrir une variété
+                de couleurs et de styles à choisir. Que ce soit pour décorer votre
+                maison, offrir un cadeau ou simplement égayer votre journée, nous
+                avons des options pour tous les goûts et tous les budgets. Avec des
+                prix très abordables, vous pouvez maintenant vous offrir des fleurs
+                fraîches tout au long de l'année sans vous ruiner.
+                Commandez dès maintenant et apportez de la couleur à votre vie.
+                <a onclick="navigation(event, 'newArticles')" href="#newArticles" class="header__btn"><img
+                        class="header__btn--active" src="images/arrowBtn.png" alt="buttom arrow image"></a>
+            </p>
+        </div>
+    </header>
+    <section class="product">
+        <h2 id="newArticles" class="product__title">Nouvel arrivage</h2>
+        <div class="product__filter">
+            <h3 class="product__filterTitle">Afficher uniquement les fleurs :</h3>
+            <ul class="product__filter--adjust">
+                <li class="product__filterBtn">
+                    <button onclick="chooseFlower('pink') ">roses</button>
+                </li>
+                <li class="product__filterBtn">
+                    <button onclick="chooseFlower('orange') ">oranges</button>
+                </li>
+                <li class="product__filterBtn">
+                    <button onclick="chooseFlower('yellow') ">jaunes</button>
+                </li>
+                <li class="product__filterBtn">
+                    <button onclick="chooseFlower('white') ">blanches</button>
+                </li>
+                <li class="product__filterBtn">
+                    <button onclick="chooseFlower() ">tout afficher</button>
+                </li>
+            </ul>
+        </div>
+        <div class="product__container">
+        </div>
+    </section>
+
+    <article class="about">
+        <div class="about__img"></div>
+        <div class="about__content">
+            <h2 id="aboutUs" class="about__title">
+                Chez SHOP <span class="deco">Flower</span><br>
+                toutes les fleurs sont cultivées en<br><br>
+                <span class="fr1">FR</span><span class="fr2">AN</span><span class="fr3">CE</span>
+            </h2>
+            <p class="about__txt">
+                <br>Shop Flower est votre fleuriste en ligne pour toutes les
+                occasions florales. Nous offrons une grande sélection de fleurs
+                fraîches et colorées pour décorer votre maison, envoyer des cadeaux ou
+                embellir n'importe quel événement. Avec une livraison rapide et
+                fiable, vous pouvez être sûr que vos fleurs arriveront en parfait état
+                et prêtes à être appréciées. Nous offrons une variété de styles et de
+                couleurs pour répondre à tous les goûts, avec des prix abordables pour
+                tout budget.<br>
+                Nous sommes fiers de notre service client exceptionnel et de notre
+                engagement à offrir une expérience d'achat en ligne simple et
+                agréable.<br>
+                <br><strong>
+                    Commandez dès maintenant et découvrez pourquoi Shop Flower est LE
+                    site en ligne de choix pour les amoureux des fleurs !</strong>
+            </p>
+            <img class="about__logo" src="images/shopFlowerAboutLogo.gif" alt="Logo de shop flower">
+        </div>
+    </article>
+
+    <div class="about__arrowBox">
+        <a href="#"><img class="about__arrowTop" src="images/arrowBtn.png" alt="buttom arrow image"></a>
+    </div>
+
+    <footer id="contact" class="footer">
+        <h2 class="footer__title">Contact</h2>
+        <div class="footer__container">
+            <form action="#" method="post">
+                <div class="footer__form-group">
+                    <label for="mail">Adresse mail</label>
+                    <input type="email" id="mail" name="user_mail" placeholder="Ex: mon-mail@gmail.com">
+                </div>
+                <div class="footer__form-group">
+                    <label for="msg">Message</label>
+                    <textarea id="msg" name="user_message" placeholder="Entrez votre message"></textarea>
+                </div>
+                <input class="footer__formBtn" type="submit" name="submit" value="Envoyer">
+            </form>
+
+            <ul class="footer__contact">
+                <li>
+                    <i class="fas fa-phone" aria-hidden="true"></i> 04 12 12 11 12
+                </li>
+                <li>
+                    <i class="fas fa-at" aria-hidden="true"></i> shopflower@info.com
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 2 Place
+                    Sathonay, 69001 Lyon
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.min.js"></script>
+</body>
+
+</html>
